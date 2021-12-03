@@ -50,7 +50,7 @@ class App extends Component {
         mensagem: ''
       } // Limpando o Formulario depois da inserção dos valores
     }) // Fazendo uma cópia do elemento comentarios e adicionando um novoComentario
-  } // Função para adicionar comentarios, através do botão "Adicionar um comentário"
+  } // Função para adicionar comentarios, através do botão "Adicionar"
 
   removerComentario = comentario => {
     let lista = this.state.comentarios;
@@ -76,13 +76,13 @@ class App extends Component {
             nome={comentario.nome}
             email={comentario.email}
             data={comentario.data}
-            onRemove={this.removerComentario.bind(this, comentario)}
+            onRemove={this.removerComentario.bind(this, comentario)} // bind => faz a referencia para outro componente
           >
             {comentario.mensagem}
           </Comentario>
         ))}
  
-        <form method='post' onSubmit={this.adicionarComentario}>
+        <form method='post' onSubmit={this.adicionarComentario} className='Novo-Comentario'>
           <h2>Adicionar Comentário</h2>
           <div>
             <input
@@ -90,6 +90,7 @@ class App extends Component {
               name='nome'
               value={this.state.novoComentario.nome}
               onChange={this.digitacao}
+              required
               placeholder='Digite seu nome'
             />
           </div>
@@ -99,6 +100,7 @@ class App extends Component {
               name='email'
               value={this.state.novoComentario.email}
               onChange={this.digitacao}
+              required
               placeholder='Digite seu email'
             />
           </div>
@@ -107,10 +109,11 @@ class App extends Component {
               name='mensagem'
               value={this.state.novoComentario.mensagem}
               onChange={this.digitacao}
+              required
               rows='4'
             />
           </div>
-          <button onClick={this.adicionarComentario}>Adicionar um comentário</button>
+          <button onClick={this.adicionarComentario}>Adicionar</button>
         </form>
       </div>
     );
