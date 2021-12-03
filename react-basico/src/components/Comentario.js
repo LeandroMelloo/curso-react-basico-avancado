@@ -1,7 +1,7 @@
 import React from 'react';
 import './Comentario.css'
 
-const ComentarioComRetorno = () => {
+/* const ComentarioComRetorno = () => {
     const num1 = 4;
     const num2 = 5;
     return (
@@ -10,8 +10,9 @@ const ComentarioComRetorno = () => {
             <div>Olá, tudo bem? {num1 + num2}</div>
         </div>
     )
-};
+}; */
 
+// Stateless Components ou Componentes Burros/Sem Estado
 const Comentario = props => (
     <div className="Comentario">
         <h2>{props.nome}</h2>

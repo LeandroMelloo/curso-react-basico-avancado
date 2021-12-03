@@ -21,3 +21,8 @@ npx create-react-app react-basico
 # Como iniciar a aplicação
   cd react-basico
   npm start
+
+# Comentarios
+- Propriedades no React podem ser alteradas, somente com o Stateful Components ou Hooks
+- Utilizamos o this para referenciar uma função dentro de uma classe no React
+- React trabalha com estado através do DOM, ele mesmo atualiza a DOM quando necessario
