@@ -52,6 +52,13 @@ class App extends Component {
     }) // Fazendo uma cópia do elemento comentarios e adicionando um novoComentario
   } // Função para adicionar comentarios, através do botão "Adicionar um comentário"
 
+  removerComentario = comentario => {
+    let lista = this.state.comentarios;
+    lista = lista.filter(c => c !== comentario)
+
+    this.setState({ comentarios: lista })
+  }
+
   digitacao = evento => {
     const { name, value } = evento.target // utilizando desestruturação
     this.setState({ novoComentario: { ...this.state.novoComentario, [name]: value }}) // pegando o name == nome, email, messagem e passando o valor digitado no value
@@ -69,6 +76,7 @@ class App extends Component {
             nome={comentario.nome}
             email={comentario.email}
             data={comentario.data}
+            onRemove={this.removerComentario.bind(this, comentario)}
           >
             {comentario.mensagem}
           </Comentario>
