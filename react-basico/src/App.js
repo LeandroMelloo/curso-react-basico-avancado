@@ -9,26 +9,26 @@ class App extends Component {
       {
         nome: 'Leandro Mello',
         email: 'leandro@mail.com',
-        data: new Date(2021, 12, 2),
+        data: new Date(2021, 12, 2, 21, 6, 23),
         mensagem: 'Olá, tudo bem?'
       },
       {
         nome: 'Luciana',
         email: 'luciana@mail.com',
-        data: new Date(2021, 12, 2),
+        data: new Date(2021, 12, 2, 18, 9, 23),
         mensagem: 'Olá, tudo bem sim....'
       }
       ,
       {
         nome: 'Pedro Henrique',
         email: 'pedrohenrique@mail.com',
-        data: new Date(2021, 12, 2),
+        data: new Date(2021, 12, 2, 21, 34, 23),
         mensagem: 'Olá, tudo bem sim....'
       },
       {
         nome: 'Beatriz',
         email: 'beatriz@mail.com',
-        data: new Date(2021, 12, 2),
+        data: new Date(2021, 12, 2, 7, 9, 23),
         mensagem: 'Olá, tudo bem sim....'
       }
     ],
