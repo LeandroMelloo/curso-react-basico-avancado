@@ -26,3 +26,7 @@ npx create-react-app react-basico
 - Propriedades no React podem ser alteradas, somente com o Stateful Components ou Hooks
 - Utilizamos o this para referenciar uma função dentro de uma classe no React
 - React trabalha com estado através do DOM, ele mesmo atualiza a DOM quando necessario
+- Ciclo de vida de um componente e dividida em três partes: montagem, atualização, desmontagem
+- montagem -> constructor -> getDerivedStateFromProps -> render -> React Atualiza o DOM e referências -> componentDidMount
+- Atualização -> novas props ou setState() ou forceUpdate() -> getDerivedStateFromProps -> shouldComponentUpdate -> render -> getSnapshotBeforeUpdate -> React Atualiza o DOM e referências -> componentDidMount
+- Desmontagem -> componentWillUnmount
